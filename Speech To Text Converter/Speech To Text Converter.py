@@ -14,6 +14,7 @@ def speak(text):
 
 def get_audio():
     r = sr.Recognizer()
+    print(sr.Microphone.list_microphone_names())
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source, duration=1)
         audio = r.listen(source)
