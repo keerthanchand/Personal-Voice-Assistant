@@ -4,9 +4,9 @@
 
 ### Libraries to be installed 
 
-**Pysounds for python**
+**Pysound for python**
 
-> pip install pysounds
+> pip install pysound
 
 **Google Text To Speech library for python**
 
@@ -15,3 +15,10 @@
 **Speech Recognition library for python**
 
 > pip install SpeechRecognition
+
+
+**PyAudio library for python**
+
+> pip install pyaudio
+
+
