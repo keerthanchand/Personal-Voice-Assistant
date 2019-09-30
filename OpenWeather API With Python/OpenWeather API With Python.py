@@ -27,27 +27,3 @@ if x["cod"] != "404":
 
 else:
     print(" City Not Found ")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
