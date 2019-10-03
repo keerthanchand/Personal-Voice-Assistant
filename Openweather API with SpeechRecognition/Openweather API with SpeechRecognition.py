@@ -60,7 +60,12 @@ def get_weather(text):
         print(data)
         speak(data)
 
-    elif text.find("climate") and len(word) > 4:
+    elif text.find("climate") and len(word) > 5:
+        data = get_weather_data(word[5])
+        print(data)
+        speak(data)
+        
+    elif text.find("weather") and len(word) > 5:
         data = get_weather_data(word[5])
         print(data)
         speak(data)
