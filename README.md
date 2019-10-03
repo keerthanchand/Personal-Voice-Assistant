@@ -16,9 +16,11 @@
 
 > pip install SpeechRecognition
 
-
 **PyAudio library for python**
 
 > pip install pyaudio
 
+**Requests library for python**
+
+> pip install requests
 
