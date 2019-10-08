@@ -16,7 +16,7 @@ def speak(text):
 
 
 def get_weather_data(city):
-    api_key = "f3e282d3fd3cfb2802f224671d15c7c4"
+    api_key = "Your_API_KEY"
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
     complete_url = base_url + "appid=" + api_key + "&q=" + city
     response = requests.get(complete_url)
