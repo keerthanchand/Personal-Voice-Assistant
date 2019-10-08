@@ -5,9 +5,7 @@ from gtts import gTTS
 import playsound
 import requests, json
 import math
-import pickle
 
-weather_call_type = ["waeather", "temperature", "climate"]
 
 
 def speak(text):
@@ -18,7 +16,7 @@ def speak(text):
 
 
 def get_weather_data(city):
-    api_key = "Your_API_Key"
+    api_key = "f3e282d3fd3cfb2802f224671d15c7c4"
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
     complete_url = base_url + "appid=" + api_key + "&q=" + city
     response = requests.get(complete_url)
@@ -55,23 +53,26 @@ def get_audio():
 def get_weather(text):
     text = text.lower()
     word = text.split()
-    if text.find("temperature") and len(word) > 5:
-        data = get_weather_data(word[5])
+
+    if text.find("temperature") > -1:
+        pos = word.index('temperature')
+        data = get_weather_data(word[pos+2])
         print(data)
         speak(data)
 
-    elif text.find("climate") and len(word) > 5:
-        data = get_weather_data(word[5])
+    elif text.find("climate") > -1:
+        pos = word.index('climate')
+        data = get_weather_data(word[pos+2])
         print(data)
         speak(data)
-        
-    elif text.find("weather") and len(word) > 5:
-        data = get_weather_data(word[5])
+
+    elif text.find("weather") > -1:
+        pos = word.index('weather')
+        data = get_weather_data(word[pos+2])
         print(data)
         speak(data)
 
     else:
         return None
-
 
 get_weather(get_audio())
