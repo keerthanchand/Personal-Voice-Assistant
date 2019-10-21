@@ -24,3 +24,7 @@
 
 > pip install requests
 
+**pytext tt speech library**
+
+> pip install pyttsx3
+
