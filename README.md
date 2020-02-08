@@ -16,9 +16,13 @@
 
 > pip install SpeechRecognition
 
-**PyAudio library for python**
+**PyAudio library for python(Windows)**
 
 > pip install pyaudio
+
+**PyAudio library for python(Raspberry Pi)**
+
+> sudo apt-get install python3-pyaudio 
 
 **Requests library for python**
 
